@@ -3,33 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Link Page</title>
+  <title>Welcome to the App</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 20%;
-      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
       color: #333;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
     }
 
-    a {
-      color: #007BFF;
-      text-decoration: none;
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
       font-size: 1.2em;
+      margin-bottom: 30px;
     }
 
-    a:hover {
-      text-decoration: underline;
+    a.button {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 1em;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #0056b3;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Access the Site</h1>
-  <p>
-    <a href="https://9000-firebase-studio-1747050208813.cluster-isls3qj2gbd5qs4jkjqvhahfv6.cloudworkstations.dev" target="_blank">
-      https://9000-firebase-studio-1747050208813.cluster-isls3qj2gbd5qs4jkjqvhahfv6.cloudworkstations.dev
+  <div class="container">
+    <h1>Welcome to Firebase Studio</h1>
+    <p>Please click the link below to test out the app.</p>
+    <a class="button" href="https://9000-firebase-studio-1747050208813.cluster-isls3qj2gbd5qs4jkjqvhahfv6.cloudworkstations.dev" target="_blank">
+      Open the App
     </a>
-  </p>
+  </div>
 </body>
 </html>
